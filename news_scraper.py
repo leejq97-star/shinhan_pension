@@ -11,12 +11,12 @@ class NewsScraper:
         self.keywords = keywords
         self.base_url = "https://news.google.com/rss/search"
 
-    def fetch_news(self, hours: int = 2) -> Dict[str, List[Dict]]:
+    def fetch_news(self, hours: int = 5) -> Dict[str, List[Dict]]:
         """
         키워드별로 최근 뉴스를 가져옴
 
         Args:
-            hours: 몇 시간 이내의 뉴스를 가져올지 (기본: 2시간)
+            hours: 몇 시간 이내의 뉴스를 가져올지 (기본: 5시간)
 
         Returns:
             키워드별 뉴스 리스트를 담은 딕셔너리
@@ -38,7 +38,7 @@ class NewsScraper:
         """특정 키워드로 뉴스 검색"""
         try:
             # Google News RSS 사용 (한국어)
-            encoded_keyword = urllib.parse.quote(f"{keyword} when:2h")
+            encoded_keyword = urllib.parse.quote(f"{keyword} when:5h")
             url = f"{self.base_url}?q={encoded_keyword}&hl=ko&gl=KR&ceid=KR:ko"
 
             feed = feedparser.parse(url)
@@ -62,7 +62,7 @@ class NewsScraper:
     def format_news_html(self, news_data: Dict[str, List[Dict]]) -> str:
         """뉴스 데이터를 HTML 형식으로 포맷팅"""
         if not news_data:
-            return "<p>최근 2시간 이내에 새로운 뉴스가 없습니다.</p>"
+            return "<p>최근 5시간 이내에 새로운 뉴스가 없습니다.</p>"
 
         html = """
         <html>
@@ -133,7 +133,7 @@ class NewsScraper:
         <body>
             <div class="header">
                 <h1>📰 뉴스 알림</h1>
-                <p>최근 2시간 이내 뉴스</p>
+                <p>최근 5시간 이내 뉴스</p>
             </div>
         """
 

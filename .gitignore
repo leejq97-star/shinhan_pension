@@ -26,6 +26,9 @@ wheels/
 # Environment variables
 .env
 
+# 민감한 정보가 포함된 파일
+제목*.txt
+
 # IDE
 .vscode/
 .idea/

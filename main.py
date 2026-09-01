@@ -28,7 +28,7 @@ def main():
     # 뉴스 스크래핑
     print("📰 뉴스 검색 중...")
     scraper = NewsScraper(keywords)
-    news_data = scraper.fetch_news(hours=2)
+    news_data = scraper.fetch_news(hours=5)
 
     if news_data:
         print(f"✅ 총 {len(news_data)}개 키워드에서 뉴스 발견")

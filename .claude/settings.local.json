@@ -15,7 +15,13 @@
       "PowerShell(git init)",
       "PowerShell(git add .)",
       "PowerShell(winget install Git.Git --accept-source-agreements --accept-package-agreements)",
-      "PowerShell(git push -u origin main)"
+      "PowerShell(git push -u origin main)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\" remote add origin https://github.com/leejq97-star/shinhan_pension.git)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\" branch -M main)",
+      "PowerShell(Unregister-ScheduledTask -TaskName '�����˸�_�Žð�' -Confirm:$false)",
+      "PowerShell($action = New-ScheduledTaskAction -Execute 'C:\\\\Users\\\\infomax\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps\\\\python.exe' -Argument 'main.py' -WorkingDirectory 'c:\\\\Users\\\\infomax\\\\.claude\\\\projects\\\\1. 뉴스알림 받기'; $trigger1 = New-ScheduledTaskTrigger -Daily -At '07:00'; $trigger2 = New-ScheduledTaskTrigger -Daily -At '12:00'; $trigger3 = New-ScheduledTaskTrigger -Daily -At '15:00'; $trigger4 = New-ScheduledTaskTrigger -Daily -At '19:00'; $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable; Register-ScheduledTask -TaskName '뉴스알림_하루4회' -Action $action -Trigger $trigger1,$trigger2,$trigger3,$trigger4 -Settings $settings -Description '매일 7시, 12시, 15시, 19시에 뉴스 키워드 알림 전송' -Force)",
+      "PowerShell(Get-ScheduledTask -TaskName '�����˸�_�Ϸ�4ȸ')",
+      "PowerShell($task = Get-ScheduledTask -TaskName '뉴스알림_하루4회'; $task.Triggers | ForEach-Object { [PSCustomObject]@{ 'Type' = $_.CimClass.CimClassName; 'StartTime' = $_.StartBoundary } } | Format-Table -AutoSize)"
     ]
   }
 }

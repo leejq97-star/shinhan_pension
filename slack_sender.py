@@ -122,7 +122,7 @@ class SlackSender:
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "최근 2시간 이내에 새로운 뉴스가 없습니다."
+                        "text": "최근 5시간 이내에 새로운 뉴스가 없습니다."
                     }
                 },
                 {
