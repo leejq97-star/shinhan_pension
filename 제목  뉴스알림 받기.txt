@@ -1,0 +1,9 @@
+제목 : 뉴스알림 받기
+뉴스 키워드 : 퇴직연금, 신한지주, 신한은행, 사모펀드, 
+뉴스 대상  : 매시각 정각에서 2시간 이내 출고된 기사
+보내는 이메일 : leejq97@gmail.com
+받는 이메일 : leejq97@gmail.com
+slack url : https://app.slack.com/client/T0BTW868GUD/C0BU43CQDQC?entry_point=default_oauth&lpt=1&geocode=ko-kr
+git hub repository : https://github.com/leejq97-star/shinhan_pension
+실행 : 매시간 정각에 이메일을 보내 줘
+구글 앱 비밀번호 : uajp yyrh rthj dfay

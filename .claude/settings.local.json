@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(pip install -r requirements.txt)",
+      "PowerShell(python --version)",
+      "PowerShell(py --version)",
+      "PowerShell(python -m pip install -r requirements.txt)",
+      "PowerShell(python main.py)",
+      "PowerShell(python scheduler.py)",
+      "PowerShell(\\(Get-Command python\\).Source)",
+      "PowerShell($action = New-ScheduledTaskAction -Execute 'C:\\\\Users\\\\infomax\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps\\\\python.exe' -Argument 'main.py' -WorkingDirectory 'c:\\\\Users\\\\infomax\\\\.claude\\\\projects\\\\1. 뉴스알림 받기'; $trigger = New-ScheduledTaskTrigger -Once -At \\(Get-Date\\).Date -RepetitionInterval \\(New-TimeSpan -Hours 1\\) -RepetitionDuration \\([TimeSpan]::MaxValue\\); $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable; Register-ScheduledTask -TaskName '뉴스알림_매시간' -Action $action -Trigger $trigger -Settings $settings -Description '매시간 정각에 뉴스 키워드 알림 이메일 전송' -Force)",
+      "PowerShell($action = New-ScheduledTaskAction -Execute 'C:\\\\Users\\\\infomax\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps\\\\python.exe' -Argument 'main.py' -WorkingDirectory 'c:\\\\Users\\\\infomax\\\\.claude\\\\projects\\\\1. 뉴스알림 받기'; $trigger = New-ScheduledTaskTrigger -Once -At \\(Get-Date\\).Date -RepetitionInterval \\(New-TimeSpan -Hours 1\\) -RepetitionDuration \\(New-TimeSpan -Days 9999\\); $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable; Register-ScheduledTask -TaskName '뉴스알림_매시간' -Action $action -Trigger $trigger -Settings $settings -Description '매시간 정각에 뉴스 키워드 알림 이메일 전송' -Force)",
+      "PowerShell(Get-ScheduledTask -TaskName '�����˸�_�Žð�')",
+      "PowerShell(Get-ScheduledTaskInfo)",
+      "PowerShell(git init)",
+      "PowerShell(git add .)",
+      "PowerShell(winget install Git.Git --accept-source-agreements --accept-package-agreements)",
+      "PowerShell(git push -u origin main)"
+    ]
+  }
+}
